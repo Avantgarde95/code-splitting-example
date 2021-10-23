@@ -7,48 +7,33 @@
 }
 
 .header {
-    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
 
     width: 100%;
-    padding: 1rem 1rem;
-
-    font-size: 1.5rem;
-    color: #ffffff;
-    background-color: #2e2e2e;
+    border-bottom: 1px solid #000000;
 }
 
-.viewer {
-    overflow-y: auto;
-    box-sizing: border-box;
+.demo {
+    cursor: pointer;
 
-    width: 100%;
-    height: 100%;
     flex: 1;
-    padding: 0 1rem 1rem 1rem;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
 
-    h1 {
-        font-size: 1.8rem;
-        text-decoration: underline;
+    font-family: inherit;
+    font-size: 1rem;
+
+    &:not(:last-child) {
+        border-right: 2px solid #2e2e2e;
     }
 
-    h2 {
-        font-size: 1.2rem;
+    &:hover {
+        background-color: #aaaaaa;
     }
 
-    h3 {
-        font-size: 1rem;
-    }
-
-    pre {
-        box-sizing: border-box;
-
-        padding: 0.5rem;
-
-        color: #ffffff;
-        background-color: #2e2e2e;
-    }
-
-    code {
-        font-family: 'Inconsolata', monospace;
+    &.isSelected {
+        background-color: #bbbbbb;
     }
 }
